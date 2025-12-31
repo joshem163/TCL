@@ -28,7 +28,59 @@ The aligned representations are fused and used for supervised graph classificati
 - **Backbone-agnostic design** compatible with standard GNNs such as GIN and GCN.
 - **Strong empirical performance** on TU benchmarks and OGB molecular datasets.
 
----
+
+
 
 ## Architecture
+![GraphTCL](https://github.com/user-attachments/assets/c1cfac2f-a2ae-4dcb-9a14-246aa57d2265)
+
+
+---
+
+## Datasets
+
+### TU Benchmark Datasets
+- MUTAG  
+- BZR  
+- PTC  
+- COX2  
+- PROTEINS  
+- IMDB-BINARY  
+- IMDB-MULTI  
+
+### OGB Molecular Datasets
+- ogbg-molbace  
+- ogbg-molclintox  
+- ogbg-molbbbp  
+- ogbg-molhiv  
+- ogbg-molsider  
+
+---
+
+## Implementation Details
+
+- **Framework**: PyTorch, PyTorch Geometric  
+- **GNN Backbones**: GIN, GCN  
+- **Topological Features**:
+  - Persistent Homology
+  - Heat Kernel Signature (HKS) filtration
+  - Vectorizations (e.g., persistence images, curves)
+- **Training Protocol**:
+  - TU datasets: 10-fold cross-validation
+  - OGB datasets: official scaffold splits
+- **Loss Function**:
+  \[
+  \mathcal{L} = \mathcal{L}_{cls} + \alpha \mathcal{L}_{con}
+  \]
+  with \(\alpha = 0.1\)
+
+---
+
+# Train GraphTCL on a TU dataset
+python train.py \
+  --dataset MUTAG \
+  --gnn gin \
+  --topo hks \
+  --alpha 0.1
+
 
