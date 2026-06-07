@@ -1,8 +1,8 @@
-# GraphTCL: Cross-View Topology-Aware Graph Representation Learning
+# GraphTCL: Topology-Aware Contrastive Learning for Graph Classificatio
 
 This repository contains the official implementation of **GraphTCL**, a dual-view contrastive learning framework for graph classification that aligns **structural graph representations learned by GNNs** with **global topological representations derived from persistent homology**.
 
-📄 **Paper**: *Cross-View Topology-Aware Graph Representation Learning*  
+📄 **Paper**: *GraphTCL: Topology-Aware Contrastive Learning for Graph Classificatio*  
 📌 **arXiv**: Link will be added later
 
 ---
@@ -53,7 +53,9 @@ The aligned representations are fused and used for supervised graph classificati
 - ogbg-molclintox  
 - ogbg-molbbbp  
 - ogbg-molhiv  
-- ogbg-molsider  
+- ogbg-molsider
+- ogbg-moltoxcast 
+- ogbg-moltox21
 
 ---
 
