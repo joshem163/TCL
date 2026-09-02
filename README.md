@@ -66,7 +66,7 @@ The aligned representations are fused and used for supervised graph classificati
 - **Topological Features**:
   - Persistent Homology
   - Heat Kernel Signature (HKS) filtration
-  - Vectorizations (e.g., persistence images, curves)
+  - Vectorizations (e.g. Betti curves)
 - **Training Protocol**:
   - TU datasets: 10-fold cross-validation
   - OGB datasets: official scaffold splits
@@ -79,7 +79,7 @@ The aligned representations are fused and used for supervised graph classificati
 ---
 
 # Train GraphTCL on a TU dataset
-python train.py \
+python graphtcl_train_accuracy_grid_search.py \
   --dataset MUTAG \
   --gnn gin \
   --topo hks \
