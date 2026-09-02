@@ -25,7 +25,7 @@ The aligned representations are fused and used for supervised graph classificati
 
 - **Dual-view contrastive framework** aligning structural (GNN) and topological (PH) representations.
 - **Topology-aware representation learning** treating topology as an independent modality rather than an auxiliary feature.
-- **Backbone-agnostic design** compatible with standard GNNs such as GIN and GCN.
+- **Backbone-flixible design** compatible with standard GNNs such as GIN and GCN.
 - **Strong empirical performance** on TU benchmarks and OGB molecular datasets.
 
 
